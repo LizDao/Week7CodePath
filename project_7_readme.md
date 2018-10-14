@@ -93,8 +93,8 @@ GIFs created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while doing the work
-
+The installation is extremely time consuming and confusing. The error messages are misleading and searching through forums, trying out tons of different solutions are a bit frustrating. 
+But the hacking part is quite fun! 
 ## License
 
     Copyright [yyyy] [name of copyright owner]
