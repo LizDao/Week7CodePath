@@ -13,16 +13,16 @@ Time spent: **X** hours spent in total
     - Fixed in version: 4.2.3
   - [ ] GIF Walkthrough: ![](https://github.com/LizDao/Week7CodePath/blob/master/GIF_Walkthrough/XSS_Embedded_Linke.gif)
   - [ ] Steps to recreate:
-     The following code demonstrates the vulnerability.
-     It should be entered in a page or posting using the HTML edit mode (instead of the default WYSIWYG):
-      '''
+     The following code demonstrates the vulnerability.\n
+     It should be entered in a page or posting using the HTML edit mode (instead of the default WYSIWYG):\n
+      ```
       <a href="[caption code=">]</a><a title=" onmouseover=alert('test')  ">link</a>
-      '''
-      WordPress shortcode processing manipulates this into the following form:
-      '''
+      ```
+      WordPress shortcode processing manipulates this into the following form:\n
+      ```
       <a href="</a><a title=" onmouseover=alert('test')  ">link</a>
-      '''
-       A real-world exploit could use a style attribute to create a transparent tag covering the whole browser window to force execution of      the onmouseover code. 
+      ```
+       A real-world exploit could use a style attribute to create a transparent tag covering the whole browser window to force execution of      the onmouseover code. \n
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/changeset/33359)
 1. (Required) Vulnerability Name or ID
