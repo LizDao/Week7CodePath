@@ -6,17 +6,27 @@ Time spent: **X** hours spent in total
 
 ## Pentesting Report
 
-1. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
+1. (Required) Authenticated Stored Cross-Site Scripting (XSS)
+  - [ ] Summary: Cross-site scripting (XSS) vulnerability in WordPress before 4.2.3 allows remote authenticated users to inject arbitrary web script or HTML by leveraging the Author or Contributor role to place a crafted shortcode inside an HTML element, related to wp-includes/kses.php and wp-includes/shortcodes.php. 
+    - Vulnerability types:XSS
+    - Tested in version:4.2.2 and earlier
+    - Fixed in version: 4.2.3
+  - [ ] GIF Walkthrough: ![](https://github.com/LizDao/Week7CodePath/blob/master/GIF_Walkthrough/XSS_Embedded_Linke.gif)
+  - [ ] Steps to recreate:
+     The following code demonstrates the vulnerability.
+     It should be entered in a page or posting using the HTML edit mode (instead of the default WYSIWYG):
+      '''
+      <a href="[caption code=">]</a><a title=" onmouseover=alert('test')  ">link</a>
+      '''
+      WordPress shortcode processing manipulates this into the following form:
+      '''
+      <a href="</a><a title=" onmouseover=alert('test')  ">link</a>
+      '''
+       A real-world exploit could use a style attribute to create a transparent tag covering the whole browser window to force execution of      the onmouseover code. 
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link 1](https://core.trac.wordpress.org/changeset/33359)
 1. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
+  - [ ] Summary:  
     - Vulnerability types:
     - Tested in version:
     - Fixed in version: 
