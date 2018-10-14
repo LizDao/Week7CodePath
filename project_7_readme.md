@@ -1,6 +1,6 @@
 # Project 7 - WordPress Pentesting
 
-Time spent: **X** hours spent in total
+Time spent: **5** hours spent in total
 
 > Objective: Find, analyze, recreate, and document **five vulnerabilities** affecting an old version of WordPress
 
@@ -11,7 +11,7 @@ Time spent: **X** hours spent in total
     - Vulnerability types:XSS
     - Tested in version:4.2.2 and earlier
     - Fixed in version: 4.2.3
-  - [ ] GIF Walkthrough: ![](https://github.com/LizDao/Week7CodePath/blob/master/GIF_Walkthrough/XSS_A_Tag.gif)
+  - [ ] GIF Walkthrough: ![](https://github.com/LizDao/Week7CodePath/blob/master/GIF_Walkthrough/XXS_A_Tag.gif)
   - [ ] Steps to recreate:
      First, you need to gain posting permission to the website (maybe through another exploit)
      Then the following code should be entered in a page or posting using the HTML edit mode:
@@ -30,7 +30,7 @@ Time spent: **X** hours spent in total
     - Vulnerability types: XSS
     - Tested in version: 4.3 and earlier
     - Fixed in version: 4.3.1
-  - [ ] GIF Walkthrough: ![](https://github.com/LizDao/Week7CodePath/blob/master/GIF_Walkthrough/XSS_A_Tag_2.gif)
+  - [ ] GIF Walkthrough: ![](https://github.com/LizDao/Week7CodePath/blob/master/GIF_Walkthrough/XXS_A_Tag_2.gif)
   - [ ] Steps to recreate: 
     This is quite similar to the first exploit. You need to gain post level permission and then post the following code 
     to the website:
