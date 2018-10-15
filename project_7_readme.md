@@ -44,10 +44,10 @@ Time spent: **5** hours spent in total
     - [ ] Affected source code:
     - [Link 1](https://github.com/WordPress/WordPress/commit/f72b21af23da6b6d54208e5c1d65ececdaa109c8)
     -[Link 2](https://blog.checkpoint.com/2015/09/15/finding-vulnerabilities-in-core-wordpress-a-bug-hunters-trilogy-part-iii-ultimatum/)
-1. (Required) Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
+3. (Required) Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
   - [ ] Summary: In WordPress before 4.7.3 (wp-includes/embed.php), there is authenticated Cross-Site Scripting (XSS) in YouTube URL Embeds. 
     - Vulnerability types: XSS
-    - Tested in version:4.7.2
+    - Tested in version:4.7.2 or earlier
     - Fixed in version: 4.7.3
   - [ ] GIF Walkthrough: ![](https://github.com/LizDao/Week7CodePath/blob/master/GIF_Walkthrough/XSS_Embedded_Linke.gif)
   - [ ] Steps to recreate: 
@@ -61,16 +61,19 @@ Time spent: **5** hours spent in total
     ```
     - [ ] Affected source code:
     - [Link 1](https://github.com/WordPress/WordPress/commit/419c8d97ce8df7d5004ee0b566bc5e095f0a6ca8)
-1. (Optional)  Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
-  - [ ] Summary: In WordPress before 4.7.3 (wp-includes/embed.php), there is authenticated Cross-Site Scripting (XSS) in YouTube URL Embeds. 
+4. (Optional)  Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
+  - [ ] Summary: Two Cross-Site Scripting vulnerabilities exists in the playlist functionality of WordPress. These issues can be exploited by convincing an Editor or Administrator into uploading a malicious MP3 file. Once uploaded the issues can be triggered by a Contributor or higher using the playlist shortcode. 
     - Vulnerability types: XSS
-    - Tested in version:4.7.2
+    - Tested in version:4.7.2 or earlier
     - Fixed in version: 4.7.3
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-1. (Optional) Vulnerability Name or ID
+    - [ ] GIF Walkthrough:  ![](https://github.com/LizDao/Week7CodePath/blob/master/GIF_Walkthrough/XSS_MetaData.gif)
+    - [ ] Steps to recreate: 
+      Download the following mp3 file and upload to the website media library:
+      [mp3 file](https://www.securify.nl/advisory/SFY20160742/xss.mp3)
+      Create a audio playlist in the new post and add this mp3 file to the playlist
+    - [ ] Affected source code:
+    - [Link 1](https://github.com/WordPress/WordPress/commit/28f838ca3ee205b6f39cd2bf23eb4e5f52796bd7)
+5. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
     - Vulnerability types:
     - Tested in version:
