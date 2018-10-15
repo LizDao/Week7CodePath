@@ -73,7 +73,7 @@ Time spent: **5** hours spent in total
       Create a audio playlist in the new post and add this mp3 file to the playlist
     - [ ] Affected source code:
     - [Link 1](https://github.com/WordPress/WordPress/commit/28f838ca3ee205b6f39cd2bf23eb4e5f52796bd7)
-5. (Optional) Vulnerability Name or ID
+5. (Optional) Stored Cross-site Scripting
   - [ ] Summary: Cross-site scripting (XSS) vulnerability in wp-includes/wp-db.php in WordPress before 4.2.1 allows remote attackers to inject arbitrary web script or HTML via a long comment that is improperly stored because of limitations on the MySQL TEXT data type. 
     - Vulnerability types:XSS
     - Tested in version: 4.2 or earlier
